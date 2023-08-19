@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(245, 241, 241);}
+
+.heading{
+display: inline;
+
+}
+#userSpan{
+    cursor: pointer;
+}
+span{
+    color: gray;
+    font-size: 0.87rem;
+}
+.postNameTime{
+    margin-left: 0.6rem;
+}
+.editButton{
+    color: #7748F8;
+    cursor: pointer;
+}
+.deleteButton{
+    color: #7748F8;
+    cursor: pointer;
+}
+.myPara{
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    color: rgb(86, 75, 75);
+    font-size: 1rem;
+}
+.photoAndTitle{
+    display: flex;
+}
+#userLogin{
+    width: 5rem;
+    height: 2rem;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    margin-left: 3.3rem;
+    /* margin-bottom: 0.5rem; */
+}
+.photo{
+    height: 3.5rem;
+    width: 3.9rem;
+    border-radius: 5px;
+    /* border: 2px solid black; */
+}
+
+.myBlogsHeading{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+margin-top: 1rem;
+}
+.postCard{
+    /* border: 2px solid rgb(198, 158, 158); */
+    min-height: 9rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    word-wrap: break-word;
+    background-color: #f8f9fa;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#dashboard{
+    width: 80%;
+    margin: auto;
+}
+.logoutLink{
+    cursor: pointer;
+}
+.dashboardHeading{
+    background-color: rgb(252, 252, 245);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+
+}
+.userInputs{
+    background-color: #f8f9fa;
+    margin: auto;
+    width: 70%;
+    height: 12rem;
+    margin-top: 1.5rem;
+}
+.userAndLogout{
+    display: inline;
+ 
+}
+.inputs{
+    padding: 1rem;
+    margin: auto;
+    width: 90%;
+}
+#postText{
+    height: 4rem;
+    width: 90%;
+    border: 1px solid rgb(126, 113, 113);
+    margin-top: 1rem;
+    border-radius: 4px;
+}
+#postInput{
+    height: 2rem;
+    width: 90%;
+border: 1px solid rgb(126, 113, 113);
+    border-radius: 4px;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: blue;
+    color: white;
+    height: 2rem;
+}
+.logoutLink{
+    text-decoration: none;
+    color: white;
+}
+#postButton{
+    background-color: blue;
+    color: white;
+    width: 6rem;
+    height: 1.5rem;
+    border-radius: 4px;
+    margin-top: 0.3rem;
+}
+@media screen  and (max-width:700px){
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+    #userSpan{
+        margin-right: 1.5rem !important;
+    }
+    .heading{
+        font-size: 1.3rem;
+    }
+}

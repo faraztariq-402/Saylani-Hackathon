@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(245, 241, 241);
+}
+.image{
+    height: 3rem;
+    width: 3rem;
+    background-color: darkgray;
+    border: 2px solid gray;
+}
+.main{
+    display: flex;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    height: 3rem;
+}
+#backToAllBlogs{
+    margin-left: 2rem;
+}
+.logoutLink{
+    cursor: pointer;
+}
+p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+.userInformation{
+    height: 100vh;
+    margin-top: 2rem;
+    width: 80%;
+    margin: auto;
+}
+.logoutLink{
+    text-decoration: none;
+    color: white;
+}
+#backToAllBlogs{
+    color: #643ad8;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+.dashboardHeading{
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    
+    background-color: #f8f9fa;
+
+}

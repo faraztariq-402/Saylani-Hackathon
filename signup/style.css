@@ -3,27 +3,54 @@
     padding: 0;
     box-sizing: border-box;
 }
+#passwordNotMatch{
+    color: #ff0000;
+    display: flex;
+    text-align: center;
+}
 .myButton{
     
     margin-bottom: 0.8rem;
     margin-top: 0.8rem;
 }
+.signupHeading{
+    margin-left: 3rem;
+}
+.header{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blue;
+}
 .myInput{
     display: flex;
     align-items: center;
 }
-body{
-    display: flex;
+.myHeading{
+    display: inline;
+}
+.swal2-confirm, .swal2-style{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.mainContainer{
+     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+body{
+   
     background-color: rgb(167, 137, 196)
 }
 .myContainer{
     background-color: white;
     padding: 1.3rem;
-    padding-left: 2.3rem;
-    padding-right: 2.3rem;
+    padding-left: 2.6rem;
+    padding-right: 2.6rem;
     border-radius: 6px;
 }
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="header">
+        <h2 class="heading">Personal Blogging App</h2>
+        <div class="userAndLogout">
+        <span style="color: aquamarine; margin-right: 2.5rem;" id="userSpan">User 123</span>
+        <a id="logout" class="logoutLink">Logout</a>
+        
+        </div>
+    </div>
+    <div class="profileHeading">
+    <h1>Profile</h1>
+    <!-- <a href="./allposts.html" style="text-decoration: none;">See All Blogs</h1> -->
+        <span  style="text-decoration: none;" id="mySpan">See All Blogs</span>
+
+
+</div>
+
+
+<div class="completeProfile">
+    <div class="allItems">
+    <div class="image">
+       <img src="" alt="" id="profilePhoto">
+    </div>
+    <h3 style="color: black;" id="profileName"></h3>
+    <h3 style="color: black;">Password</h3>
+    <input type="text" placeholder="Old Password" id="oldPassword"><br><br>
+    <input type="text" placeholder="New Password" id="newPassword"><br><br>
+    <input type="text" placeholder="Repeat Password" id="repeatPassword"><br><br>
+<button type="submit" id="UpdatePassword">Update Password</button>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>

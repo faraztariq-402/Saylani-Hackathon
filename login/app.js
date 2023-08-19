@@ -45,45 +45,48 @@ passwordDisplay.addEventListener("click", () => {
   myPassword.type = "password";
 });
 
-userLogin.addEventListener("submit", (e)=>{
-    e.preventDefault()
-    signInWithEmailAndPassword(auth, email.value, password.value)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      alert("user login succesful")
-      window.location.href = "../main/index.html"
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log("error in signin", error)
-    });
-
-})
-loginWithGoogle.addEventListener("click", ()=>{
-    signInWithPopup(auth, provider)
-  .then((result) => {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    // The signed-in user info.
-    const user = result.user;
-    alert("google login successful")
-    window.location.href = "../main/index.html"
-    // IdP data available using getAdditionalUserInfo(result)
-    // ...
-  }).catch((error) => {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // The email of the user's account used.
-    const email = error.customData.email;
-    // The AuthCredential type that was used.
-    const credential = GoogleAuthProvider.credentialFromError(error);
-    // ...
-    alert("error in google login ", error)
-  });
-
-})
+userLogin.addEventListener("submit", (e) => {
+  e.preventDefault();
+  signInWithEmailAndPassword(auth, email.value, password.value)
+      .then((userCredential) => {
+          const user = userCredential.user;
+          Swal.fire({
+              icon: 'success',
+              title: 'Login Successful',
+              text: 'You have successfully logged in!',
+          }).then(() => {
+              window.location.href = "../main/index.html";
+          });
+      })
+      .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          Swal.fire({
+              icon: 'error',
+              title: 'Login Error',
+              text: errorMessage,
+          });
+      });
+});
+loginWithGoogle.addEventListener("click", () => {
+  signInWithPopup(auth, provider)
+      .then((result) => {
+          const user = result.user;
+          Swal.fire({
+              icon: 'success',
+              title: 'Google Login Successful',
+              text: 'You have successfully logged in with Google!',
+          }).then(() => {
+              window.location.href = "../main/index.html";
+          });
+      })
+      .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          Swal.fire({
+              icon: 'error',
+              title: 'Google Login Error',
+              text: errorMessage,
+          });
+      });
+});
